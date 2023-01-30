@@ -4,5 +4,5 @@
 #include <unistd.h> 
 
 
-
+void *_malloc(size_t size);
 #endif /* __MALLOC_H__ */

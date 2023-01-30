@@ -11,6 +11,10 @@
 void *naive_malloc(size_t size)
 {
 	void *ptr;
+
+	if (size < 0)
+		printf("non-positive bytes of memory at: %lu", size);
+
 	printf("Starting break is %p\n", ptr);
 
 	return (EXIT_SUCCESS);

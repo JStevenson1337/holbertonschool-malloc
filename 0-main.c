@@ -6,6 +6,7 @@
  * main - Program entry point
  *
  * Return: EXIT_SUCCESS or EXIT_FAILURE
+
  */
 int main(void)
 {
@@ -16,5 +17,3 @@ int main(void)
 
     return (EXIT_SUCCESS);
 }
-
-

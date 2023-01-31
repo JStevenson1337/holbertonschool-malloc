@@ -1,3 +1,16 @@
 node_modules/
 .vs*
 package-lock.json
+nh_malloc/*
+testing
+.#*
+*.out
+*.org
+.gitignore
+.idea/compilerexplorer.settings.xml
+.idea/vcs.xml
+.idea/misc.xml
+naive_malloc.c.bak2
+a.out
+a.out
+.gitignore

@@ -16,19 +16,34 @@
 #include <unistd.h>
 #include <assert.h>
 
-typedef struct Header
+#ifndef PAGESIZE
+#define PAGESIZE 3 * sysconf(_SC_PAGESIZE); /* size of mem requsted during syscall to resieve from the kernal 12288 bytes*/
+#endif
+
+#define BLOCK(ptr) ((void *)((unsigned long)ptr + sizeof(block_t)))
+
+/**
+ *
+ *
+ *
+ *
+ */
+ typedef struct Block
 {
-    struct Header *next;
-    struct Header *prev;
-    size_t size;
-    BITMAP BITS;
-} Header;
+    struct Block *next;;
+    struct Block *prev;
+    size_t *size;
+} Block_t;
 
 typedef struct BITMAP
 {
+    size_t size;
     uint8_t HEADBITS;
     uint8_t TAILBITS;
-} BITMAP;
+} BITMAP_t;
+
+#define Block_t -> *size = Bitmap_t -> &size;
+
 
 #define static Header root;
 #define static Header *toor = NULL;

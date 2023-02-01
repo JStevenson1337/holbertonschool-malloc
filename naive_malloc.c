@@ -7,7 +7,7 @@
 */
 void *naive_malloc(size_t size)
 {
-    void *start = {0},  *heapptr = NULL;
+    void *start, *baseptr = NULL, *heapptr = NULL, *ptr = NULL;
     size_t page_size;
 
     page_size = sysconf(_SC_PAGESIZE);
@@ -21,28 +21,23 @@ void *naive_malloc(size_t size)
         assert(heapptr != ((void *) -1) || heapptr != NULL);
 
         start = heapptr;
-        memmove(heapptr, start, page_size);
+		memmove(heapptr, start, page_size);
 
 
-        printf("heap = %p\t start = %p\t pagesize = %lu\n",
+        printf("heap = %p\t start = %p\t pagesize = %lu",
                    heapptr, start, (unsigned long int)page_size);
-        printf("heap = %lu\t start = %lu\t pagesize = %lu\n",
-                   sizeof(heapptr), sizeof(start), (unsigned long int)page_size);
-
-
-
 
     }
-    return (0);
+	return (0);
 
 }
 
 
 
-// int main()
-// {
-//     size_t var = 60;
+int main()
+{
+    size_t var = 60;
 
-//     naive_malloc(var);
-//     return (0);
-// }
+    naive_malloc(var);
+    return (0);
+}

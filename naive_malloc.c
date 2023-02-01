@@ -10,7 +10,7 @@ void *naive_malloc(size_t size)
     void *start, *baseptr = NULL, *heapptr = NULL, *ptr = NULL;
     size_t page_size;
 
-    page_size = sysconf(_SC_PAGESIZE);
+
 
     if (size == 0)
         return (NULL);

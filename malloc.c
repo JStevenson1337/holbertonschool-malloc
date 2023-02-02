@@ -1,7 +1,7 @@
 #include "malloc.h"
 
 /**
-* naive_malloc - reimplementation of malloc
+* _malloc - reimplementation of malloc
 * @size: bytes requested
 * Return: SUCCESS= pointer to allocated memory; FAIL = NULL
 */
